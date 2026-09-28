@@ -1,0 +1,19 @@
+Signup
+   ↓
+Password hash → Database
+   ↓
+Login
+   ↓
+password_verify()
+   ↓
+Session created
+   ↓
+Dashboard
+   ↓
+Correct user's details
+   ↓
+Logout
+   ↓
+Session destroyed
+   ↓
+Homepage
