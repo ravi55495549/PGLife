@@ -34,15 +34,24 @@ window.addEventListener("load", function () {
 });
 
 var signup_success = function (event) {
-    var response = JSON.parse(event.target.responseText);
-    if (response.success) {
-        alert(response.message);
-        window.location.href = "dashboard.php";
-    } else {
-        alert(response.message);
+    console.log("SIGNUP RESPONSE:", event.target.responseText);
+
+    try {
+        var response = JSON.parse(event.target.responseText);
+
+        if (response.success) {
+            alert(response.message);
+            window.location.href = "/PGLife/dashboard.php";
+        } else {
+            alert(response.message);
+        }
+    } catch (error) {
+        console.error("SIGNUP JSON ERROR:", error);
+        console.error("SIGNUP SERVER RESPONSE:", event.target.responseText);
+
+        alert("Signup server error aa raha hai. Console me SERVER RESPONSE check karo.");
     }
 };
-
 var login_success = function (event) {
     console.log("LOGIN RESPONSE:", event.target.responseText);
 
