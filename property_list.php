@@ -403,6 +403,7 @@ if (isset($_SESSION['user_id'])) {
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/property_list.js"></script>
+    <script src="js/common.js"></script>
 </body>
 
 </html>
