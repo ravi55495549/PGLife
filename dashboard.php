@@ -1262,7 +1262,7 @@ if ($booking_result) {
 
             <div class="footer-copyright">
 
-                © 2020 Copyright PG Life
+                © 2026 Copyright PG Life
 
             </div>
 

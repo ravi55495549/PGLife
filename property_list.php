@@ -401,7 +401,7 @@ if (isset($_SESSION['user_id'])) {
                     <a href="property_list.php">PG in Hyderabad</a>
                 </div>
             </div>
-            <div class="footer-copyright">© 2020 Copyright PG Life </div>
+            <div class="footer-copyright">© 2026 Copyright PG Life </div>
         </div>
     </div>
 

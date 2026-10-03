@@ -220,7 +220,7 @@ require_once "includes/header.php";
                     <a href="property_list.html">PG in Hyderabad</a>
                 </div>
             </div>
-            <div class="footer-copyright">© 2020 Copyright PG Life </div>
+            <div class="footer-copyright">© 2026 Copyright PG Life </div>
         </div>
     </div>
 

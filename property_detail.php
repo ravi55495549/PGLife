@@ -1369,7 +1369,7 @@ require_once "includes/header.php";
 
         <div class="footer-copyright">
 
-            © 2020 Copyright PG Life
+            © 2026 Copyright PG Life
 
         </div>
 
