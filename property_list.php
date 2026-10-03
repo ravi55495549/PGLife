@@ -83,138 +83,140 @@ if (isset($_SESSION['user_id'])) {
             </div>
         </div>
 
+        <div class="property-list-container">
+                <!-- Navkar -->
+
         
-        <div class="property-card row">
-            <div class="image-container col-md-4">
-                <img src="img/properties/1/1d4f0757fdb86d5f.jpg" />
-            </div>
-            <div class="content-container col-md-8">
-                <div class="row no-gutters justify-content-between">
-                    <div class="star-container" title="4.5">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="interested-container">
-                        <i
-                            class="is-interested-image <?= in_array(1, $interested_properties) ? 'fas' : 'far' ?> fa-heart"
-                            property_id="1">
-                        </i>
+    <div class="property-card row" data-gender="male" data-rent="9500">
+                    <div class="image-container col-md-4">
+                    <img src="img/properties/1/1d4f0757fdb86d5f.jpg" />
+                </div>
+                <div class="content-container col-md-8">
+                    <div class="row no-gutters justify-content-between">
+                        <div class="star-container" title="4.5">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="interested-container">
+                            <i
+                                class="is-interested-image <?= in_array(1, $interested_properties) ? 'fas' : 'far' ?> fa-heart"
+                                property_id="1">
+                            </i>
 
-                        <div class="interested-text">
-                            <?= $interested_counts[1] ?? 0 ?> interested
+                            <div class="interested-text">
+                                <?= $interested_counts[1] ?? 0 ?> interested
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-container">
+                        <div class="property-name">Navkar Paying Guest</div>
+                        <div class="property-address">44, Juhu Scheme, Juhu, Mumbai, Maharashtra 400058</div>
+                        <div class="property-gender">
+                            <img src="img/male.png" />
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="rent-container col-6">
+                            <div class="rent">Rs 9,500/-</div>
+                            <div class="rent-unit">per month</div>
+                        </div>
+                        <div class="button-container col-6">
+                            <a href="property_detail.php?id=1" class="btn btn-primary">View</a>
                         </div>
                     </div>
                 </div>
-                <div class="detail-container">
-                    <div class="property-name">Navkar Paying Guest</div>
-                    <div class="property-address">44, Juhu Scheme, Juhu, Mumbai, Maharashtra 400058</div>
-                    <div class="property-gender">
-                        <img src="img/male.png" />
-                    </div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="rent-container col-6">
-                        <div class="rent">Rs 9,500/-</div>
-                        <div class="rent-unit">per month</div>
-                    </div>
-                    <div class="button-container col-6">
-                        <a href="property_detail.php?id=1" class="btn btn-primary">View</a>
-                    </div>
-                </div>
             </div>
-        </div>
-
-        <div class="property-card row">
-            <div class="image-container col-md-4">
-                <img src="img/properties/1/eace7b9114fd6046.jpg" />
-            </div>
-            <div class="content-container col-md-8">
-                <div class="row no-gutters justify-content-between">
-                    <div class="star-container" title="4.8">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="property-card row " data-gender="unisex" data-rent="8500">
+                    <div class="image-container col-md-4">
+                        <img src="img/properties/1/eace7b9114fd6046.jpg" />
                     </div>
-                    <div class="interested-container">
-                        <i
-                            class="is-interested-image <?= in_array(2, $interested_properties) ? 'fas' : 'far' ?> fa-heart"
-                            property_id="2"
-                        ></i>
+                    <div class="content-container col-md-8">
+                        <div class="row no-gutters justify-content-between">
+                            <div class="star-container" title="4.8">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="interested-container">
+                                <i
+                                    class="is-interested-image <?= in_array(2, $interested_properties) ? 'fas' : 'far' ?> fa-heart"
+                                    property_id="2"
+                                ></i>
 
-                        <div class="interested-text">
-                            <?= $interested_counts[2] ?? 0 ?> interested
+                                <div class="interested-text">
+                                    <?= $interested_counts[2] ?? 0 ?> interested
+                                </div>
+
+                            </div>
+                        </div>    
+                        <div class="detail-container">
+                            <div class="property-name">Ganpati Paying Guest</div>
+                            <div class="property-address">Police Beat, Sainath Complex, Besides, SV Rd, Daulat Nagar, Borivali East, Mumbai - 400066</div>
+                            <div class="property-gender">
+                                <img src="img/unisex.png" />
+                            </div>
                         </div>
-
-                    </div>
-                </div>    
-                <div class="detail-container">
-                    <div class="property-name">Ganpati Paying Guest</div>
-                    <div class="property-address">Police Beat, Sainath Complex, Besides, SV Rd, Daulat Nagar, Borivali East, Mumbai - 400066</div>
-                    <div class="property-gender">
-                        <img src="img/unisex.png" />
-                    </div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="rent-container col-6">
-                        <div class="rent">Rs 8,500/-</div>
-                        <div class="rent-unit">per month</div>
-                    </div>
-                    <div class="button-container col-6">
-                        <a href="property_detail.php?id=2" class="btn btn-primary">View</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="property-card row">
-            <div class="image-container col-md-4">
-                <img src="img/properties/1/46ebbb537aa9fb0a.jpg" />
-            </div>
-            <div class="content-container col-md-8">
-                <div class="row no-gutters justify-content-between">
-                    <div class="star-container" title="3.5">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <div class="interested-container">
-                        <i
-                            class="is-interested-image <?= in_array(3, $interested_properties) ? 'fas' : 'far' ?> fa-heart"
-                            property_id="3">
-                        </i>
-
-                        <div class="interested-text">
-                            <?= $interested_counts[3] ?? 0 ?> interested
+                        <div class="row no-gutters">
+                            <div class="rent-container col-6">
+                                <div class="rent">Rs 8,500/-</div>
+                                <div class="rent-unit">per month</div>
+                            </div>
+                            <div class="button-container col-6">
+                                <a href="property_detail.php?id=2" class="btn btn-primary">View</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="detail-container">
-                    <div class="property-name">PG for Girls Borivali West</div>
-                    <div class="property-address">Plot no.258/D4, Gorai no.2, Borivali West, Mumbai, Maharashtra 400092</div>
-                    <div class="property-gender">
-                        <img src="img/female.png" />
+
+                <div class="property-card row" data-gender="female" data-rent="8000">
+                    <div class="image-container col-md-4">
+                        <img src="img/properties/1/46ebbb537aa9fb0a.jpg" />
                     </div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="rent-container col-6">
-                        <div class="rent">Rs 8,000/-</div>
-                        <div class="rent-unit">per month</div>
-                    </div>
-                    <div class="button-container col-6">
-                        <a href="property_detail.php?id=3" class="btn btn-primary">View</a>
+                    <div class="content-container col-md-8">
+                        <div class="row no-gutters justify-content-between">
+                            <div class="star-container" title="3.5">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="interested-container">
+                                <i
+                                    class="is-interested-image <?= in_array(3, $interested_properties) ? 'fas' : 'far' ?> fa-heart"
+                                    property_id="3">
+                                </i>
+
+                                <div class="interested-text">
+                                    <?= $interested_counts[3] ?? 0 ?> interested
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-container">
+                            <div class="property-name">PG for Girls Borivali West</div>
+                            <div class="property-address">Plot no.258/D4, Gorai no.2, Borivali West, Mumbai, Maharashtra 400092</div>
+                            <div class="property-gender">
+                                <img src="img/female.png" />
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="rent-container col-6">
+                                <div class="rent">Rs 8,000/-</div>
+                                <div class="rent-unit">per month</div>
+                            </div>
+                            <div class="button-container col-6">
+                                <a href="property_detail.php?id=3" class="btn btn-primary">View</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </div>
-
     <div class="modal fade" id="filter-modal" tabindex="-1" role="dialog" aria-labelledby="filter-heading" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -229,17 +231,20 @@ if (isset($_SESSION['user_id'])) {
                     <h5>Gender</h5>
                     <hr />
                     <div>
-                        <button class="btn btn-outline-dark btn-active">
+                        <button class="btn btn-outline-dark btn-active" data-filter="all">
                             No Filter
                         </button>
-                        <button class="btn btn-outline-dark">
-                            <i class="fas fa-venus-mars"></i>Unisex
+
+                        <button class="btn btn-outline-dark" data-filter="unisex">
+                            <i class="fas fa-venus-mars"></i> Unisex
                         </button>
-                        <button class="btn btn-outline-dark">
-                            <i class="fas fa-mars"></i>Male
+
+                        <button class="btn btn-outline-dark" data-filter="male">
+                            <i class="fas fa-mars"></i> Male
                         </button>
-                        <button class="btn btn-outline-dark">
-                            <i class="fas fa-venus"></i>Female
+
+                        <button class="btn btn-outline-dark" data-filter="female">
+                            <i class="fas fa-venus"></i> Female
                         </button>
                     </div>
                 </div>
@@ -404,6 +409,148 @@ if (isset($_SESSION['user_id'])) {
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/property_list.js"></script>
     <script src="js/common.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const filterButtons = document.querySelectorAll("#filter-modal button[data-filter]");
+            const propertyCards = document.querySelectorAll(".property-card");
+
+            filterButtons.forEach(function (button) {
+
+                button.addEventListener("click", function () {
+
+                    const selectedFilter = this.getAttribute("data-filter");
+
+                    // Active button change
+                    filterButtons.forEach(function (btn) {
+                        btn.classList.remove("btn-active");
+                    });
+
+                    this.classList.add("btn-active");
+
+                    // Filter properties
+                    propertyCards.forEach(function (card) {
+
+                        const gender = card.getAttribute("data-gender");
+
+                        if (selectedFilter === "all" || gender === selectedFilter) {
+                            card.style.display = "";
+                        } else {
+                            card.style.display = "none";
+                        }
+
+                    });
+
+                });
+
+            });
+
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const filterButtons = document.querySelectorAll(
+                "#filter-modal button[data-filter]"
+            );
+
+            const propertyContainer = document.querySelector(
+                ".property-list-container"
+            );
+
+            let propertyCards = Array.from(
+                propertyContainer.querySelectorAll(".property-card")
+            );
+
+
+            /* =========================
+            FILTER
+            ========================= */
+
+            filterButtons.forEach(function (button) {
+
+                button.addEventListener("click", function () {
+
+                    const selectedFilter = this.getAttribute("data-filter");
+
+                    // Active button
+                    filterButtons.forEach(function (btn) {
+                        btn.classList.remove("btn-active");
+                    });
+
+                    this.classList.add("btn-active");
+
+
+                    // Show / hide properties
+                    propertyCards.forEach(function (card) {
+
+                        const gender = card.getAttribute("data-gender");
+
+                        if (
+                            selectedFilter === "all" ||
+                            gender === selectedFilter
+                        ) {
+                            card.style.display = "";
+                        } else {
+                            card.style.display = "none";
+                        }
+
+                    });
+
+                });
+
+            });
+
+
+            /* =========================
+            HIGHEST RENT FIRST
+            ========================= */
+
+            document
+                .querySelector(".filter-bar .col-auto:nth-child(2)")
+                .addEventListener("click", function () {
+
+                    propertyCards.sort(function (a, b) {
+
+                        return (
+                            Number(b.getAttribute("data-rent")) -
+                            Number(a.getAttribute("data-rent"))
+                        );
+
+                    });
+
+
+                    propertyCards.forEach(function (card) {
+                        propertyContainer.appendChild(card);
+                    });
+
+                });
+
+            /* =========================
+            LOWEST RENT FIRST
+            ========================= */
+
+            document
+                .querySelector(".filter-bar .col-auto:nth-child(3)")
+                .addEventListener("click", function () {
+
+                    propertyCards.sort(function (a, b) {
+
+                        const rentA = parseInt(a.dataset.rent);
+                        const rentB = parseInt(b.dataset.rent);
+
+                        return rentA - rentB;
+
+                    });
+
+                    propertyCards.forEach(function (card) {
+                        propertyContainer.appendChild(card);
+                    });
+
+                });
+
+        });
+    </script>
 </body>
 
 </html>

@@ -52,6 +52,11 @@ window.addEventListener("load", function () {
 
                     if (response.login_required) {
 
+                        sessionStorage.setItem(
+                            "interest_return_url",
+                            window.location.href
+                        );
+
                         $("#login-modal").modal("show");
 
                         return;

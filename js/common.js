@@ -41,7 +41,8 @@ var signup_success = function (event) {
 
         if (response.success) {
             alert(response.message);
-            window.location.href = "/PGLife/dashboard.php";
+            window.location.href = sessionStorage.getItem("booking_return_url") || "/PGLife/dashboard.php";
+            sessionStorage.removeItem("booking_return_url");
         } else {
             alert(response.message);
         }
@@ -59,18 +60,57 @@ var login_success = function (event) {
         var response = JSON.parse(event.target.responseText);
 
         if (response.success) {
+
             alert("Login successful!");
+
+            // Heart se login hua tha
+            var interestReturnUrl =
+                sessionStorage.getItem("interest_return_url");
+
+            if (interestReturnUrl) {
+
+                sessionStorage.removeItem("interest_return_url");
+
+                window.location.href = interestReturnUrl;
+
+                return;
+            }
+
+            // Book Now se login hua tha
+            var bookingReturnUrl =
+                sessionStorage.getItem("booking_return_url");
+
+            if (bookingReturnUrl) {
+
+                sessionStorage.removeItem("booking_return_url");
+
+                window.location.href = bookingReturnUrl;
+
+                return;
+            }
+
+            // Normal login
             window.location.href = "/PGLife/dashboard.php";
+
         } else {
+
             alert(response.message);
+
         }
+
     } catch (error) {
+
         console.error("JSON ERROR:", error);
-        console.error("SERVER RESPONSE:", event.target.responseText);
-        alert("Server se unexpected response aa raha hai. Console check karo.");
+        console.error(
+            "SERVER RESPONSE:",
+            event.target.responseText
+        );
+
+        alert(
+            "Server se unexpected response aa raha hai. Console check karo."
+        );
     }
 };
-
 var on_error = function (event) {
     alert('Something went wrong!');
 };

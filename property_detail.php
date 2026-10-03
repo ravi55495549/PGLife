@@ -3,7 +3,7 @@ session_start();
 
 $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
 
-/*$is_interested
+/*<div class="button-container col-6">
 |--------------------------------------------------------------------------
 | PROPERTY DATA
 |--------------------------------------------------------------------------
@@ -525,13 +525,29 @@ require_once "includes/header.php";
 
         <div class="button-container col-6">
 
-            <a
-                href="#"
-                class="btn btn-primary">
+            <?php if ($user_id): ?>
 
-                Book Now
+                <a
+                    href="booking.php?id=<?= $property_id ?>"
+                    class="btn btn-primary">
 
-            </a>
+                    Book Now
+
+                </a>
+
+            <?php else: ?>
+                <a
+                    href="#"
+                    class="btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#login-modal"
+                    onclick="sessionStorage.setItem('booking_return_url', window.location.href);">
+
+                    Book Now
+
+                </a>
+
+            <?php endif; ?>
 
         </div>
 

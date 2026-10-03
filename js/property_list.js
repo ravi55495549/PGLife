@@ -34,13 +34,28 @@ window.addEventListener("load", function () {
 
                     var response =
                         JSON.parse(XHR.responseText);
-
                     // User is not logged in
                     if (response.login_required) {
+
+                        sessionStorage.setItem(
+                            "interest_return_url",
+                            window.location.href
+                        );
+
+                        sessionStorage.setItem(
+                            "auto_interest_after_login",
+                            "1"
+                        );
+
+                        sessionStorage.setItem(
+                            "interest_property_id",
+                            property_id
+                        );
+
                         $("#login-modal").modal("show");
+
                         return;
                     }
-
                     // Some other error
                     if (!response.success) {
                         alert(response.message);
@@ -62,12 +77,12 @@ window.addEventListener("load", function () {
                     var count_element =
                         interested_button.parentElement.querySelector(".interested-text");
 
-                        if (count_element) {
+                    if (count_element) {
 
                         count_element.textContent =
-                        response.interested_count + " interested";
+                            response.interested_count + " interested";
 
-                        }
+                    }
 
                 } catch (error) {
 
@@ -100,5 +115,49 @@ window.addEventListener("load", function () {
         });
 
     });
+
+});
+// Automatically activate heart after login
+window.addEventListener("load", function () {
+
+    var autoInterest =
+        sessionStorage.getItem("auto_interest_after_login");
+
+    if (autoInterest === "1") {
+
+        sessionStorage.removeItem(
+            "auto_interest_after_login"
+        );
+
+        // Small delay so the page and heart buttons are fully loaded
+        setTimeout(function () {
+
+            var property_id =
+                sessionStorage.getItem("interest_property_id");
+
+            if (!property_id) {
+                return;
+            }
+
+            var interested_buttons =
+                document.querySelectorAll(".is-interested-image");
+
+            interested_buttons.forEach(function (button) {
+
+                if (
+                    button.getAttribute("property_id") ===
+                    property_id
+                ) {
+                    button.click();
+                }
+
+            });
+
+            sessionStorage.removeItem(
+                "interest_property_id"
+            );
+
+        }, 300);
+    }
 
 });
